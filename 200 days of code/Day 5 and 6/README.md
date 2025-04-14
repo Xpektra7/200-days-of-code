@@ -88,6 +88,7 @@ plt.title("Graph of Number of Digits vs Average Steps and Duration")
 plt.xlabel("Number of Digits")
 plt.legend(["Time (x0.1ms)", "Steps"])
 ```
+[Example of performance visualisation](https://github.com/Xpektra7/200-days-of-code/blob/38f63647c6ba46e9a67275cdf8c073361045b11c/200%20days%20of%20code/Day%205%20and%206/primality_graph.png)
 
 ## 📱 Contact
 
