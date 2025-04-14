@@ -1,6 +1,10 @@
+# CPU Architecture
+
 Different computer systems handle code execution differently, and this is largely due to variations in CPU architecture. Understanding how a CPU works and how to evaluate its performance is important for effective programming, as it helps developers write code that runs better on specific systems.
 
-The Central Processing Unit (CPU) is the most important hardware component in a computer. Its two main functions are to process data and instructions, and to control the rest of the computer system.
+## The Central Processing Unit (CPU)
+
+The CPU is the most important hardware component in a computer. Its two main functions are to process data and instructions, and to control the rest of the computer system.
 
 It consists of six main components:
 
@@ -16,6 +20,8 @@ It consists of six main components:
 
 6. Buses: They aid the ALU in executing operations by routing data through the most efficient path.
 
+
+## CPU Performance
 
 To evaluate the performance of a CPU and if it's good or not, there are a few things people look at:
 
