@@ -4,4 +4,4 @@ Algorithmic Thinking is an approach to solving problems that involves the proces
 
 Below is an diagrammatic representation of the algorithmic thinking approach to washing clothes.
 
-[https://github.com/Xpektra7/200-days-of-code/blob/main/200%20days%20of%20code/Day%204/flowchart.jpeg]
+[Diagrammatic representation](https://github.com/Xpektra7/200-days-of-code/blob/main/200%20days%20of%20code/Day%204/flowchart.jpeg)
