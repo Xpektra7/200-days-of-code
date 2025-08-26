@@ -1,0 +1,29 @@
+Half-Wave Rectifier Circuit
+
+** Circuit Description **
+
+* ac line voltage
+Vac 5 0 sin (0 169V 60Hz)
+Rs 5 1 0.5
+* transformer section
+Lp 1 0 10mH
+Ls 2 4 51uH
+Kxfrmr Lp Ls 0.999
+* isolation resistor (allows secondary side to pseudo-float)
+Risolation 4 0 100Meg
+* diode current monitor
+VD1 2 6 0
+* rectifier circuit
+D1 6 3 D1N4148
+Rload 3 4 1kOhm
+* diode model statement
+.model D1N4148 D (Is=0.1pA Rs=16 CJO=2p Tt=12n Bv=100 Ibv=0.1p)
+
+** Analysis Requests **
+.TRAN 0.5ms 100ms 0ms 0.5ms
+** Output Requests **
+.plot TRAN V(3,4) V(2,4) V(1)
+.plot TRAN V(6,3)
+.plot TRAN I(VD1)
+.probe
+.end
