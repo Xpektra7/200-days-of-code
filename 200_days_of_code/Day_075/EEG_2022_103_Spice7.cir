@@ -1,0 +1,47 @@
+The Miller integrator
+
+** Circuit Description **
+* signal sources
+Vi 3 0 PWL (0 0V 1ms 0V 1.001ms 1mV 2s 1mV)
+* components of the Miller integrator
+R1 2 3 1k
+C2 2 1 10uF
+Eopamp 1 0 0 2 1e6
+** Analysis Requests **
+.TRAN 100ms 2s 0ms 100ms
+** Output Requests
+.PLOT TRAN V(1)
+.probe
+.end
+The Damped Miller integrator (R=1M)
+
+** Circuit Description **
+* signal sources
+Vi 3 0 PWL (0 0V 1ms 0V 1.001ms 1mV 2s 1mV)
+* components of the Miller integrator
+R1 2 3 1k
+R2 1 2 1Meg
+C2 2 1 10uF
+Eopamp 1 0 0 2 1e6
+** Analysis Requests **
+.TRAN 100ms 2s 0ms 100ms
+** Output Requests
+.PLOT TRAN V(1)
+.probe
+.end
+The Damped Miller integrator (R=100k)
+
+** Circuit Description **
+* signal sources
+Vi 3 0 PWL (0 0V 1ms 0V 1.001ms 1mV 2s 1mV)
+* components of the Miller integrator
+R1 2 3 1k
+R2 1 2 100k
+C2 2 1 10uF
+Eopamp 1 0 0 2 1e6
+** Analysis Requests **
+.TRAN 100ms 2s 0ms 100ms
+** Output Requests
+.PLOT TRAN V(1)
+.probe
+.end
