@@ -1,0 +1,16 @@
+Spice As A Curve Tracer: BJT I-V Characteristics
+
+** Circuit Description **
+Vce 1 0 DC 0V
+Ib 0 2 DC 10uA
+* device under test
+Q1 1 2 0 npn_transistor
+* transistor model statement
+.model npn_transistor NPN (Is=1.8104e-15A Bf=100 VAf=35V)
+** Analysis Requests **
+* vary Vce from 0V to 10V in steps of 100mV
+.DC Vce 0V +10V 100mV
+** Output Requests **
+.plot DC I(Vce)
+.probe
+.end
