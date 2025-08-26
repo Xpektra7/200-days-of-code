@@ -1,0 +1,25 @@
+* C:\users\xpektra\Documents\LTspiceXVII\Draft4.asc
+** Circuit Description **
+* signal sources
+Vs1 1 0 dc 1V
+Vs2 2 3 dc 6V
+Is1 6 4 dc 1.5A
+* resistors
+R1 1 7 1ohm
+R2 3 4 3ohm
+R3 2 5 2ohm
+R4 1 6 5ohm
+* CCVS with ammeter
+H1 5 0 Vmeter1 2
+Vmeter1 7 2 0
+*VCCS
+G1 4 0 4 3 4
+
+** Analysis Requests **
+* compute DC solution
+.OP
+
+** Output Requests **
+* by default the ".OP" command prints all node voltages
+
+.end
