@@ -1,0 +1,35 @@
+Instrumentation Amplifier
+
+* op-amp subcircuit
+.subckt ideal_opamp 1 2 3
+* connections:      | | |
+*              output | |
+*             +ve input |
+*               -ve input
+Eopamp 1 0 2 3 1e6
+Iopen1 2 0 0A      ; redundant connection made at +ve input terminal
+Iopen2 3 0 0A      ; redundant connection made at -ve input terminal
+.ends ideal_opamp
+
+** Main Circuit **
+* signal sources
+Vcm 1 0 SIN (0 25V 60Hz)
+Vdc1 1 2 DC 10mV
+Vdc2 3 1 DC 10mV
+* instrumentation amplifier
+Xop_A1 6 2 5 ideal_opamp
+Xop_A2 7 3 4 ideal_opamp
+Xop_A3 10 9 8 ideal_opamp
+R1 5 4 10k
+R2 5 6 100k
+R3 4 7 100k
+R4 6 8 10k
+R5 7 9 10k
+R6 9 0 10k
+R7 8 10 10k
+** Analysis Requests **
+.TRAN 0.1ms 66.68ms 0 0.1ms
+** Output Requests **
+.PRINT TRAN V(2) V(3) V(10)
+.probe
+.end
