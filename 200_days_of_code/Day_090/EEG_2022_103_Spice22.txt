@@ -1,0 +1,14 @@
+       --- Operating Point ---
+
+V(1):	 10	 voltage
+V(4):	 -10	 voltage
+V(3):	 -5.4152	 voltage
+V(2):	 0.738709	 voltage
+Ic(Q1):	 -0.0045848	 device_current
+Ib(Q1):	 -4.5848e-005	 device_current
+Ie(Q1):	 0.00463065	 device_current
+I(Rc):	 0.0045848	 device_current
+I(Re):	 0.00463065	 device_current
+I(Vee):	 0.0045848	 device_current
+I(Vcc):	 -0.00463065	 device_current
+

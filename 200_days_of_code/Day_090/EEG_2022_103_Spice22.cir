@@ -1,0 +1,16 @@
+PNP Transistor DC Operating Point Calculation
+
+** Circuit Description **
+Vcc 1 0 DC +10V
+Vee 4 0 DC -10V
+Q1 3 0 2 pnp_transistor
+Re 1 2 2k
+Rc 3 4 1k
+* transistor model statement
+.model pnp_transistor pnp (Is=1.8104e-15 Bf=100)
+** Analysis Requests **
+* calculate DC bias point information
+.OP
+** Output Requests **
+* none required
+.end
