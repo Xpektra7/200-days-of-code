@@ -1,0 +1,24 @@
+* C:\users\xpektra\Documents\LTspiceXVII\Draft1.asc
+** Circuit Description **
+* signal source
+Vs 1 0 AC 1V
+Rs 1 2 20k
+* frequency-dependent amplifier
+Ri 2 0 100k
+Ci 2 0 60p
+Eamp 3 0 2 0 144
+Ro 3 4 200
+* load
+Rl 4 0 1k
+
+** Analysis Requests **
+* compute AC frequency response from 1 Hz to 100 MHz
+*   using 5 frequency steps per decade.
+.AC DEC 5 1 100Meg
+
+** Output Requests **
+* print the magnitude  and phase of the output voltage
+*   as a function of frequency
+.PRINT AC Vm(4) Vp(4)
+.PROBE
+.end
