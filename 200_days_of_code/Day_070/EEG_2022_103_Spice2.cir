@@ -1,0 +1,30 @@
+* C:\users\xpektra\Documents\LTspiceXVII\Draft1.asc
+** Circuit Description **
+* signal source
+Vs 1 0 sin (0V 1V 1Hz)
+Rs 1 2 100k
+* stage 1
+Ri1 2 0 1Meg
+E1 3 0 2 0 10
+R1 3 4 1k
+* stage 2
+Ri2 4 0 100k
+E2 5 0 4 0 100
+R2 5 6 1k
+* stage 3
+Ri3 6 0 10k
+E3 7 0 6 0 1
+R3 7 8 10
+* output load
+Rl 8 0 100
+
+** Analysis Requests **
+* compute transient response from t=0 to 5s in time steps of
+* 10ms with an internal time-step no greater than 10ms.
+.TRAN 10ms 5s 0s 10ms
+
+** Output Requests **
+* graphical post-processor
+.PROBE
+.backanno
+.end
