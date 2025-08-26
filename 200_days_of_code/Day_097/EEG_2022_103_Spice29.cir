@@ -1,0 +1,18 @@
+A Simple Enhancement-Mode PMOS Circuit (Rd=6k)
+
+** Circuit Description **
+* dc supplies
+Vdd 1 0 DC +5V
+* MOSFET circuit
+M1 3 2 1 1 pmos_enhancement_mosfet L=10u W=10u
+Rd 3 0 6k
+Rg1 1 2 2Meg
+Rg2 2 0 3Meg
+* mosfet model statement (by default, level 1)
+.model pmos_enhancement_mosfet pmos (kp=1m Vto=-1V lambda=0)
+** Analysis Requests **
+* calculate DC bias point
+.OP
+** Output Requests **
+* none required
+.end
