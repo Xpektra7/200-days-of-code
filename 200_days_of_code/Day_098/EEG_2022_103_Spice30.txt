@@ -1,0 +1,11 @@
+       --- Operating Point ---
+
+V(1):	 5	 voltage
+V(2):	 2.5	 voltage
+Id(M1):	 -0.0005	 device_current
+Ig(M1):	 -0	 device_current
+Ib(M1):	 2.51e-012	 device_current
+Is(M1):	 0.0005	 device_current
+I(Rd):	 0.0005	 device_current
+I(Vdd):	 -0.0005	 device_current
+

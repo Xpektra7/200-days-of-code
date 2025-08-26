@@ -1,0 +1,16 @@
+A Depletion-Mode PMOS Transistor Circuit
+
+** Circuit Description **
+* dc supplies
+Vdd 1 0 DC +5V
+* MOSFET circuit
+M1 2 1 1 1 pmos_depletion_mosfet L=10u W=10u
+Rd 2 0 5k
+* mosfet model statement (by default, level 1)
+.model pmos_depletion_mosfet pmos (kp=1m Vto=+1V lambda=0)
+** Analysis Requests **
+* calculate DC bias point
+.OP
+** Output Requests **
+* none required
+.end
