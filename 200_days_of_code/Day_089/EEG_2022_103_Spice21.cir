@@ -1,0 +1,22 @@
+Calculating Voltage Gain Of A Transistor Amplifier
+
+** Circuit Description **
+* dc supplies
+Vcc 1 0 DC +10V
+Vbb 5 0 DC +3V
+* small-signal input
+Vi 4 5 DC 1mV
+* amplifier circuit
+Q1 2 3 0 npn_transistor
+Rc 1 2 3k
+Rbb 4 3 100k
+* transistor model statement
+.model npn_transistor npn (Is=1.8104e-15 Bf=100)
+** Analysis Requests **
+* calculate small-signal transfer function: Vo/Vi
+.TF V(2) Vi
+* we shall also calculate the small-signal parameters of the transistor
+.OP
+** Output Requests **
+* none required
+.end
