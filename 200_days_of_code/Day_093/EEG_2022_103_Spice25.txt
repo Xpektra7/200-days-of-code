@@ -1,0 +1,29 @@
+       --- AC Analysis ---
+
+frequency:	1000	Hz
+V(1):	mag:          0 phase:          0° 	voltage
+V(8):	mag:          0 phase:          0° 	voltage
+V(6):	mag:       0.01 phase:          0° 	voltage
+V(5):	mag: 0.00100569 phase:   -79.2508° 	voltage
+V(4):	mag: 0.00100569 phase:   -79.2508° 	voltage
+V(2):	mag:   0.011633 phase:    22.5393° 	voltage
+V(3):	mag: 1.85767e-018 phase:   -169.035° 	voltage
+V(7):	mag:   0.011633 phase:    22.5393° 	voltage
+V(9):	mag:          0 phase:          0° 	voltage
+Ic(Q1):	mag: 1.15962e-005 phase:   -79.0348° 	device_current
+Ib(Q1):	mag: 7.58864e-008 phase:   -78.9954° 	device_current
+Is(Q1):	mag:          0 phase:         -0° 	device_current
+Ie(Q1):	mag: 1.16721e-005 phase:    100.965° 	device_current
+I(C3):	mag: 1.16721e-005 phase:   -79.0346° 	device_current
+I(C2):	mag: 1.21861e-005 phase:    116.565° 	device_current
+I(C1):	mag:          0 phase:          0° 	device_current
+I(Rl):	mag: 1.1633e-006 phase:    22.5393° 	device_current
+I(Re):	mag: 1.85767e-022 phase:   -169.035° 	device_current
+I(Rc):	mag: 1.1633e-006 phase:   -157.461° 	device_current
+I(Rb):	mag: 1.00569e-008 phase:   -79.2508° 	device_current
+I(Rs):	mag: 9.86205e-007 phase:    -174.25° 	device_current
+I(Vout):	mag: 1.1633e-006 phase:    22.5393° 	device_current
+I(Vs):	mag: 9.86205e-007 phase:    -174.25° 	device_current
+I(Vee):	mag: 1.85767e-022 phase:   -169.035° 	device_current
+I(Vcc):	mag: 1.1633e-006 phase:    22.5393° 	device_current
+

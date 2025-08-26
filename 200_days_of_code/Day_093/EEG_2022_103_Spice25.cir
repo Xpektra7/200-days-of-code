@@ -1,0 +1,37 @@
+Common-Emitter Amplifier Stage
+
+** Circuit Description **
+* power supplies
+Vcc 1 0 DC +10V
+Vee 8 0 DC -10V
+* input signal
+Vs 6 0 AC 10mV
+Rs 5 6 10k
+* amplifier
+C1 4 5 1GF
+Rb 4 0 100k
+Q1 2 4 3 Q2N2222A
+Rc 1 2 10k
+Re 3 8 10k
+C2 2 7 1GF
+C3 3 0 1GF
+* load + ammeter
+Rl 7 9 10k
+Vout 9 0 0
+* transistor model statement for the 2N2222A
+.model Q2N2222A NPN (Is=14.34f Xti=3 Eg=1.11 Vaf=74.03 Bf=255.9 Ne=1.307
++                    Ise=14.34f Ikf=.2847 Xtb=1.5 Br=6.092 Nc=2 Isc=0 Ikr=0 Rc=1
++                    Cjc=7.306p Mjc=.3416 Vjc=.75 Fc=.5 Cje=22.01p Mje=.377 Vje=.75
++                    Tr=46.91n Tf=411.1p Itf=.6 Vtf=1.7 Xtf=3 Rb=10)
+** Analysis Requests **
+* calculate DC bias point information
+.OP
+.AC LIN 1 1kHz 1kHz
+** Output Requests **
+*  voltage gain Av=Vo/Vs
+.PRINT AC Vm(6) Vp(6) Vm(7) Vp(7)
+*  current gain Ai=Io/Ii
+.PRINT AC Im(Vs) Ip(Vs) Im(Vout) Ip(Vout)
+* input resistance Ri=Vi/Ii
+.PRINT AC Vm(4) Vp(4) Im(Vs) Ip(Vs)
+.end
