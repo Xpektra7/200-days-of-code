@@ -1,0 +1,32 @@
+Common-Emitter Amplifier Stage With Sine-Wave Input
+
+** Circuit Description **
+* power supplies
+Vcc 1 0 DC +10V
+Vee 8 0 DC -10V
+* input signal
+Vs 6 0 SIN ( 0V 10mV 1kHz )
+Rs 5 6 10k
+* amplifier
+C1 4 5 10uF
+Rb 4 0 100k
+Q1 2 4 3 Q2N2222A
+Rc 1 2 10k
+Re 3 8 10k
+C2 2 7 10uF
+C3 3 0 10uF
+* load + ammeter
+Rl 7 9 10k
+Vout 9 0 0
+* transistor model statement for the 2N2222A
+.model Q2N2222A NPN (Is=14.34f Xti=3 Eg=1.11 Vaf=74.03 Bf=255.9 Ne=1.307
++                    Ise=14.34f Ikf=.2847 Xtb=1.5 Br=6.092 Nc=2 Isc=0 Ikr=0 Rc=1
++                    Cjc=7.306p Mjc=.3416 Vjc=.75 Fc=.5 Cje=22.01p Mje=.377 Vje=.75
++                    Tr=46.91n Tf=411.1p Itf=.6 Vtf=1.7 Xtf=3 Rb=10)
+** Analysis Requests **
+.OP
+.TRAN 50us 8ms 5ms 50us
+** Output Requests **
+.Plot TRAN V(7) V(6)
+.probe
+.end
