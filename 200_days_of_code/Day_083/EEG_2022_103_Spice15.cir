@@ -1,0 +1,34 @@
+Zener Diode Voltage Regulator Circuit (No Load)
+
+* zener diode subcircuit
+.subckt zener_diode 1 2
+* connections:      | |
+*               anode |
+*               cathode
+Dforward 1 2 1mA_diode
+Dreverse 2 4 ideal_diode
+Vz0 4 3 DC 7.3V
+Rz 1 3 10
+* diode model statement
+.model 1mA_diode D (Is=100pA n=1.679 )
+.model ideal_diode D (Is=100pA n=0.01 )
+.ends zener_diode
+
+** Main Circuit **
+* power supply
+Vs 3 0 DC +20V
+Vripple 1 3 sin ( 0V 5V 60Hz )
+* zener diode voltage regulator circuit
+R  1 2 383
+XD1 4 2 zener_diode
+Vzener 4 0 0
+* simulated load condition
+Iload 2 5 0A
+Vload 5 0 0
+** Analysis Requests **
+.OP
+.TRAN 0.5ms 100ms 0ms 0.5ms
+** Output Requests **
+.PLOT TRAN V(1) V(2)
+.PROBE
+.end
