@@ -1,0 +1,5 @@
+       --- Transfer Function ---
+
+Transfer_function:	 -9.99989	 transfer
+vi#Input_impedance:	 1000.01	 impedance
+output_impedance_at_V(1):	 0	 impedance
