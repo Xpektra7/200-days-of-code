@@ -12,17 +12,15 @@ Each day has its own folder in this repository:
 ├── ...
 ├── Day N/
 ```
-Inside each folder, you'll find Python scripts, problem solutions, and experiments tied to that day’s focus.
+Inside each folder, you'll find Python scripts,Matlab scripts,VIs Spice netlists, problem solutions, and experiments tied to that day’s focus.
 
 ## 🔧 Technologies & Tools
 - Python
+- MATLAB
+- LTSpice
+- LabVIEW
 - Matplotlib (used in some visualizations)
 - Time module (for benchmarking)
-
-## ✅ Sample Highlights
-- **Prime Number Analysis:** Optimized primality testing with step and time tracking.
-- **Cube Root Estimation:** Approximation using binary search and (soon) Newton-Raphson methods.
-- **Performance Graphs:** Visual representation of how complexity increases with input size.
 
 ## 💡 Goal
 - Build discipline through daily coding
