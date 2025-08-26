@@ -1,0 +1,14 @@
+Spice As A Curve Tracer: Diode I-V Characteristics
+
+** Circuit Description **
+VD 1 0 DC 700mV
+Dtest 1 0 1mA_diode
+* diode model statement
+.model 1mA_diode D (Is=100pA n=1.679)
+** Analysis Requests **
+* vary diode voltage and measure diode anode current
+.DC VD 0V 800mV 10mV
+** Output Requests **
+.plot DC I(VD)
+.probe
+.end
