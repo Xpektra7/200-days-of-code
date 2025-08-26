@@ -1,0 +1,27 @@
+DC Transfer Characteristics Of An Inverting Amplifier With Gain -10
+
+* op-amp subcircuit
+.subckt large_signal_opamp 1 2 3
+* connections:             | | |
+*                     output | |
+*                    +ve input |
+*                      -ve input
+R 4 0 2.5Meg
+C 4 5 30p
+Ginput 4 0 Table {V(2)-V(3)} = (-0.1V,-19uA) (0.1V,19uA)
+Emiddle 5 0 4 0 -529
+Eoutput 1 0 Table {V(5)} = (-10V,-10V) (10V,10V)
+.ends large_signal_opamp
+
+** Main Circuit **
+* signal source
+Vi 3 0 DC 1V
+Xopamp 1 0 2 large_signal_opamp
+R1 3 2 1k
+R2 2 1 10k
+** Analysis Requests **
+.DC Vi -15V +15V 100mV
+** Output Requests **
+.PLOT DC V(1)
+.probe
+.end
