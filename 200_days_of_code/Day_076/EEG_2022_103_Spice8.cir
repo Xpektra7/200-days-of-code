@@ -1,0 +1,11 @@
+* C:\users\xpektra\Documents\LTspiceXVII\Draft1.asc
+** Circuit Description **
+* signal source
+Vi 2 0 DC 1V
+* op-amp in unity-gain configuration
+Eopamp 1 0 2 1 1e6
+** Analysis Requests **
+.TF V(1) Vi
+** Output Requests **
+* none required
+.end
