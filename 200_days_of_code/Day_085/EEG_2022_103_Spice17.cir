@@ -1,0 +1,15 @@
+A DC Restorer Circuit
+
+** Circuit Description **
+Vi 1 0 PULSE ( -3 7 0s 10us 10us 0.490ms 1ms )
+C1 1 2 1u
+D1 0 2 D1N4148
+* diode model statement
+.model D1N4148 D (Is=0.1pA Rs=16 CJO=2p Tt=12n Bv=100 Ibv=0.1p)
+
+** Analysis Requests **
+.TRAN 100u 10m 0m 100u
+** Output Requests **
+.PLOT TRAN V(1) V(2)
+.probe
+.end
