@@ -1,0 +1,16 @@
+Enhancement-Mode N-Channel MOSFET Id - Vds Characteristics
+
+** Circuit Description **
+* bias conditions
+Vds 1 0 DC +10V     ; this value is arbitrary, we are going to sweep it
+Vgs 2 0 DC +3V
+* MOSFET under test
+M1 1 2 0 0 nmos_enhancement_mosfet L=10u W=400u
+* mosfet model statement (by default, level 1)
+.model nmos_enhancement_mosfet nmos (kp=20u Vto=+2 lambda=0)
+** Analysis Requests **
+.DC Vds 0V 10V 100mV
+** Output Requests **
+.Plot DC I(Vds) V(1)
+.Probe
+.end
