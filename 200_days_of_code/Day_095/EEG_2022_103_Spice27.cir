@@ -1,0 +1,18 @@
+Simple Enhancement-Mode MOSFET Circuit
+
+** Circuit Description **
+* dc supplies
+Vdd 1 0 DC +5V
+Vss 4 0 DC -5V
+* MOSFET circuit
+M1 2 0 3 3 nmos_enhancement_mosfet L=10u W=400u
+Rd 1 2 10k
+Rs 3 4 5k
+* mosfet model statement (by default, level 1)
+.model nmos_enhancement_mosfet nmos (kp=20u Vto=+2V lambda=0)
+** Analysis Requests **
+* calculate DC bias point
+.OP
+** Output Requests **
+* none required
+.end
