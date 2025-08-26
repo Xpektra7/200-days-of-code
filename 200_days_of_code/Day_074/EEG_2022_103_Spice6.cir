@@ -1,0 +1,14 @@
+* C:\users\xpektra\Documents\LTspiceXVII\Draft1.asc
+** Circuit Description **
+* signal source
+Vi 3 0 PWL (0 0V 1ms 0V 1.001ms 1V 10ms 1V)
+* components of the Miller integrator
+R1 2 3 1k
+C2 2 1 10uF
+Eopamp 1 0 0 2 1e6
+** Analysis Requests **
+.TRAN 100us 5ms 0ms 100us
+** Output Requests **
+.PRINT TRAN V(3) V(1)
+.probe
+.end
