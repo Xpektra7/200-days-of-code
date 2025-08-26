@@ -1,0 +1,19 @@
+       --- Operating Point ---
+
+V(1):	 1	 voltage
+V(2):	 0.846154	 voltage
+V(3):	 -5.15385	 voltage
+V(6):	 -6.5	 voltage
+V(4):	 -4.80769	 voltage
+V(7):	 0.846154	 voltage
+V(5):	 0.307692	 voltage
+I(H1):	 0.269231	 device_current
+I(Is1):	 1.5	 device_current
+I(R4):	 1.5	 device_current
+I(R3):	 0.269231	 device_current
+I(R2):	 -0.115385	 device_current
+I(R1):	 0.153846	 device_current
+I(G1):	 1.38462	 device_current
+I(Vmeter1):	 0.153846	 device_current
+I(Vs2):	 -0.115385	 device_current
+I(Vs1):	 -1.65385	 device_current
