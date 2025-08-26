@@ -1,0 +1,28 @@
+Inverting Amplifier With Gain -1
+
+* op-amp subcircuit
+.subckt small_signal_opamp 1 2 3
+* connections:             | | |
+*                     output | |
+*                    +ve input |
+*                      -ve input
+Ginput 0 4 2 3 0.19m
+Iopen1 2 0 0A      ; redundant connection made at +ve input terminal
+Iopen2 3 0 0A      ; redundant connection made at -ve input terminal
+R1 4 0 1.323G
+C1 4 0 30p
+Eoutput 1 0 4 0 1
+.ends small_signal_opamp
+
+** Main Circuit **
+* signal source
+Vi 3 0 AC 1V 0Degrees
+Xopamp 1 0 2 small_signal_opamp
+R1 3 2 1k
+R2 2 1 1k
+** Analysis Requests **
+.AC DEC 5 0.1Hz 100MegHz
+** Output Requests **
+.PRINT AC V(3) V(1)
+.probe
+.end
